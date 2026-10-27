@@ -1,0 +1,23 @@
+[project]
+name = "ember-forge-math"
+version = "0.1.0"
+description = "Mathematical model of the fictional Ember Forge slot game"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",       # fast arrays: enumeration and Monte Carlo
+    "pandas",      # tables: paytable, contribution reports
+    "scipy",       # statistics: confidence intervals, distributions
+    "matplotlib",  # charts: payout distribution, convergence plots
+]
+
+[dependency-groups]
+dev = [
+    "pytest",      # unit tests for the win evaluator and probabilities
+    "jupyterlab",  # notebooks for exploration and reports
+    "ipykernel",
+    "ruff",        # linter/formatter
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
